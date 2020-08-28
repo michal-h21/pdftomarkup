@@ -15,4 +15,7 @@ pdftomarkup
 Features
 --------
 
-* TODO
+- convert PDF to LaTeX or markup languages
+- detect paragraphs, headers, footnotes, pagenumbers and basic text formatting
+
+

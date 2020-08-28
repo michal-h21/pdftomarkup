@@ -29,12 +29,16 @@ local PKG_VERSION = '0.1.0-1'
 
 
 local pdftomarkup = {
-    _VERSION = '0.1.0-1',
+    _VERSION = PKG_VERSION
 }
+
+local xml2lua = require("xml2lua")
+local handler = require("xmlhandler.dom")
 
 
 function pdftomarkup:new (o)
     o = o or {}   -- create object if user does not provide one
+    local self = pdftomarkup
     setmetatable(o, self)
     self.__index = self
     return o
@@ -46,6 +50,13 @@ function pdftomarkup:method(text)
         return false
     end
     return true
+end
+
+function pdftomarkup:parse_xml(xml_text)
+  local parser = xml2lua.parser(handler)
+  local status = parser:parse(xml_text)
+  self.dom = handler
+  return handler
 end
 
 return pdftomarkup

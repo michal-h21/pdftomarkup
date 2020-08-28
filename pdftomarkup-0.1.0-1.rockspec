@@ -7,7 +7,7 @@ source = {
 description = {
   summary = "pdftomarkup",
   detailed = [[
-    Convert PDF to LaTeX or markup languages"
+    Convert PDF to LaTeX or markup languages
   ]],
   homepage = "https://github.com/michal-h21/pdftomarkup/",
   license = "MIT <http://opensource.org/licenses/MIT>"
